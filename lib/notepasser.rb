@@ -37,22 +37,5 @@ module Notepasser::Controllers
     end
   end
 
-  class IsMessageReadController
-    def put(message_id)
-      message = Notepasser::Models::Message.find(message_id)
-      message.update_attribute(:message_status => true)
-      message.save
-    end
-  end
-
-  class IsMessageUnreadController
-    def put(message_id)
-      message = Notepasser::Models::Message.find(message_id)
-      message.update_attribute(:message_status => false)
-      message.save
-    end
-  end
-end
-
-
-#get message, delete message, create/post message, create new user, delete user, message read?
+#get message, delete message, create/post message, create new user, delete user, message read/unread
+#Keep thinking may need more than just the above...
