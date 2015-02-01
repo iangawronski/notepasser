@@ -92,7 +92,7 @@ module Notepasser::Controllers
       "404 - unable to locate user."
     end
 
-    def detlete(login_id)
+    def delete(login_id)
       user = Notepasser::Models::User.find(login_id)
       user.destroy
       @status = 204
